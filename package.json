@@ -1,0 +1,26 @@
+{
+  "name": "kanchanabot",
+  "version": "1.0.0",
+  "description": "kanchana bot will notify urgent messages about the money",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venuhs4/kanchanabot.git"
+  },
+  "keywords": [
+    "kanchana"
+  ],
+  "author": "Venu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venuhs4/kanchanabot/issues"
+  },
+  "homepage": "https://github.com/venuhs4/kanchanabot#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
