@@ -25,7 +25,6 @@ module.exports = botKanchana;
 
 'use strict';
 
-var JsonDB = require("node-json-db");
 var request = require('sync-request');
 
 //var db = new JsonDB("TickerDB", true, false);
