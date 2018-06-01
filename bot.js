@@ -15,7 +15,7 @@ bot.onText(/^\/hi (.+)$/, function (msg, match) {
 });
 
 bot.on('text', function (msg) {
-    request('http://www.google.com', function (error, response, body) {
+    request('https://bx.in.th/api/', function (error, response, body) {
         bot.sendMessage(msg.chat.id, JSON.stringify(body).substring(0, 100));
     });
 
