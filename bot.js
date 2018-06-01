@@ -3,7 +3,7 @@ var request = require('request');;
 
 var BotKanchana = require('node-telegram-bot-api');
 var botKanchana;
-botKanchana = new BotKanchana(token, { polling: true });
+botKanchana = new BotKanchana(token);
 
 botKanchana.onText(/^\/hi (.+)$/, function (msg, match) {
     var name = match[1];
