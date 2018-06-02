@@ -90,7 +90,7 @@ var getParallel = async function () {
     var dogB2I = parseFloat((((bth * 0.9975) / bx["BTC"][0] * 0.9975 / bx["DOG"][0] - 5) * bb["DOG"][1] * 0.9975 / bth).toFixed(4));
     var dogI2B = parseFloat((1 / (((inr * 0.9975) / bb["DOG"][0] - 2) * bx["DOG"][1] * 0.9975 * bx["BTC"][1] * 0.9975 / inr)).toFixed(4));
 
-    rate = { xrpB2I: xrpB2I, xrpI2B: xrpI2B, powB2I: powB2I, powI2B: powI2B, bchB2I: bchB2I, bchI2B: bchI2B, bchB2I, bchI2B };
+    rate = { xrpB2I: xrpB2I, xrpI2B: xrpI2B, powB2I: powB2I, powI2B: powI2B, bchB2I: bchB2I, bchI2B: bchI2B, dogB2I: dogB2I, dogI2B = dogI2B };
 
     var content = "XRP: " + xrpB2I + " - " + xrpI2B + '\nPOW: ' + powB2I + " - " + powI2B + '\nBCH: ' + bchB2I + " - " + bchI2B + "\nDOG: "+ dogB2I + " - " + dogI2B;
     //console.log((new Date()).toLocaleTimeString() + " " + count++ + "   XRP: " + xrpB2I + " - " + xrpI2B + "      POW: " + powB2I + " - " + powI2B);
@@ -225,7 +225,7 @@ bot.on(['/start', '/hello'], (msg) => {
 });
 
 bot.on(['/rates'], (msg) => {
-    msg.reply.text(JSON.stringify(rate));
+    msg.reply.text(content);
 });
 
 bot.on(['/threshoulds'], (msg) => {
