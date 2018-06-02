@@ -87,8 +87,8 @@ var getParallel = async function () {
     var bchB2I = parseFloat(((bth * 0.9975 / bx["BCH"][0] - 0.0001) * bb["BCH"][1] * 0.9975 / bth).toFixed(4));
     var bchI2B = parseFloat((1.0 / ((inr * 0.9975 / bb["BCH"][0] - 0.001) * bx["BCH"][1] * 0.9975 / inr)).toFixed(4));
 
-    var bchB2I = parseFloat((((bth * 0.9975) / bx["BTC"][0] * 0.9975 / bx["DOG"][0] - 5) * bb["DOG"][1] * 0.9975 / bth).toFixed(4));
-    var bchI2B = parseFloat((1 / (((inr * 0.9975) / bb["DOG"][0] - 2) * bx["DOG"][1] * 0.9975 * bx["BTC"][1] * 0.9975 / inr)).toFixed(4));
+    var dogB2I = parseFloat((((bth * 0.9975) / bx["BTC"][0] * 0.9975 / bx["DOG"][0] - 5) * bb["DOG"][1] * 0.9975 / bth).toFixed(4));
+    var dogI2B = parseFloat((1 / (((inr * 0.9975) / bb["DOG"][0] - 2) * bx["DOG"][1] * 0.9975 * bx["BTC"][1] * 0.9975 / inr)).toFixed(4));
 
     rate = { xrpB2I: xrpB2I, xrpI2B: xrpI2B, powB2I: powB2I, powI2B: powI2B, bchB2I: bchB2I, bchI2B: bchI2B, bchB2I, bchI2B };
 
