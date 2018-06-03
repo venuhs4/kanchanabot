@@ -92,7 +92,7 @@ var getParallel = async function () {
 
     rate = { xrpB2I: xrpB2I, xrpI2B: xrpI2B, powB2I: powB2I, powI2B: powI2B, bchB2I: bchB2I, bchI2B: bchI2B, dogB2I: dogB2I, dogI2B :dogI2B };
 
-    var content = "XRP: " + xrpB2I + " - " + xrpI2B + '\nPOW: ' + powB2I + " - " + powI2B + '\nBCH: ' + bchB2I + " - " + bchI2B + "\nDOG: "+ dogB2I + " - " + dogI2B;
+    var content = "\nXRP: " + xrpB2I + " - " + xrpI2B + '\nPOW: ' + powB2I + " - " + powI2B + '\nBCH: ' + bchB2I + " - " + bchI2B + "\nDOG: "+ dogB2I + " - " + dogI2B;
     //console.log((new Date()).toLocaleTimeString() + " " + count++ + "   XRP: " + xrpB2I + " - " + xrpI2B + "      POW: " + powB2I + " - " + powI2B);
     var sendNotification = (new Date() - lastSentTime) > roundTripNotifyDelay;
     if (sendNotification) {
