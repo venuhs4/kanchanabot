@@ -1,27 +1,3 @@
-var token = '573464567:AAHbwjjA5msU3axjlrG_kgFhk8-jiprF6_o';
-var request = require('request');;
-
-var BotKanchana = require('node-telegram-bot-api');
-var botKanchana;
-botKanchana = new BotKanchana(token);
-
-botKanchana.onText(/^\/hi (.+)$/, function (msg, match) {
-    var name = match[1];
-    botKanchana.sendMessage(msg.chat.id, 'Hello ' + name + '!').then(function () {
-        // reply sent!
-    });
-});
-
-botKanchana.on('text', function (msg) {
-    request('https://bx.in.th/api/', function (error, response, body) {
-        botKanchana.sendMessage(msg.chat.id, JSON.stringify(body).substring(0, 100));
-    });
-});
-
-module.exports = botKanchana;
-
-//////////////////////////////////////////////
-
 'use strict';
 
 var request = require('sync-request');
@@ -34,6 +10,7 @@ const TeleBot = require('telebot');
 
 const bot = new TeleBot('540008954:AAEWBT_xFCQ5aMncqthJ5EcnJE6s11E5IC8');
 var chatId = 201226361;
+var beginDate = new Date();
 var lastSent = undefined;
 var lastSentTime = new Date();
 var roundTripNotifyDelay = 30000;
@@ -57,6 +34,7 @@ var getResponse = function (url) {
 }
 
 var getParallel = async function () {
+    console.log(beginDate);
     try {
         data = [];
         data[0] = getResponse(urls[0]);
@@ -327,7 +305,7 @@ bot.on('text', (msg) => {
     }
 
     if (!msg.text.startsWith("/")) {
-        msg.reply.text(new Date());
+        msg.reply.text(beginDate.toLocaleDateString() + " " + beginDate.toLocaleTimeString());
     }
 });
 
