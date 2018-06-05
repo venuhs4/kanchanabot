@@ -99,7 +99,7 @@ var getParallel = async function () {
         //bellow are the notifications for round trip profit
         if (xrpB2I > powI2B && ((xrpB2I / powI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((xrpB2I / powI2B) * 1000).toFixed(0) + "/1000] : xrpB2I (" + xrpB2I + ") > powI2B (" + powI2B + ")");
-            lastSentTime = new Date();
+            lastSentTime = new Date(); 
         }
         if (xrpB2I > bchI2B && ((xrpB2I / bchI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((xrpB2I / bchI2B) * 1000).toFixed(0) + "/1000] : xrpB2I (" + xrpB2I + ") > bchI2B (" + bchI2B + ")");
