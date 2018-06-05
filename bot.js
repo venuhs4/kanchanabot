@@ -75,55 +75,55 @@ var getParallel = async function () {
     var sendNotification = (new Date() - lastSentTime) > roundTripNotifyDelay;
     if (sendNotification) {
         //bellow are the notifications for round trip profit
-        if (xrpB2I > powI2B && ((xrpB2I / powI2B) * 1000) > roundTripProfit) {
+        if (((xrpB2I / powI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((xrpB2I / powI2B) * 1000).toFixed(0) + "/1000] : xrpB2I (" + xrpB2I + ") > powI2B (" + powI2B + ")");
             lastSentTime = new Date(); 
         }
-        if (xrpB2I > bchI2B && ((xrpB2I / bchI2B) * 1000) > roundTripProfit) {
+        if (((xrpB2I / bchI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((xrpB2I / bchI2B) * 1000).toFixed(0) + "/1000] : xrpB2I (" + xrpB2I + ") > bchI2B (" + bchI2B + ")");
             lastSentTime = new Date();
         }
-        if (xrpB2I > dogI2B && ((xrpB2I / dogI2B) * 1000) > roundTripProfit) {
+        if (((xrpB2I / dogI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((xrpB2I / dogI2B) * 1000).toFixed(0) + "/1000] : xrpB2I (" + xrpB2I + ") > dogI2B (" + dogI2B + ")");
             lastSentTime = new Date();
         }
 
 
-        if (powB2I > xrpI2B && ((powB2I / xrpI2B) * 1000) > roundTripProfit) {
+        if (((powB2I / xrpI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((powB2I / xrpI2B) * 1000).toFixed(0) + "/1000] : powB2I (" + powB2I + ") > xrpI2B (" + xrpI2B + ")");
             lastSentTime = new Date();
         }
-        if (powB2I > bchI2B && ((powB2I / bchI2B) * 1000) > roundTripProfit) {
+        if (((powB2I / bchI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((powB2I / bchI2B) * 1000).toFixed(0) + "/1000] : powB2I (" + powB2I + ") > bchI2B (" + bchI2B + ")");
             lastSentTime = new Date();
         }
-        if (powB2I > dogI2B && ((powB2I / dogI2B) * 1000) > roundTripProfit) {
+        if (((powB2I / dogI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((powB2I / dogI2B) * 1000).toFixed(0) + "/1000] : powB2I (" + powB2I + ") > dogI2B (" + dogI2B + ")");
             lastSentTime = new Date();
         }
 
-        if (bchB2I > xrpI2B && ((bchB2I / xrpI2B) * 1000) > roundTripProfit) {
+        if (((bchB2I / xrpI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((bchB2I / xrpI2B) * 1000).toFixed(0) + "/1000] : bchB2I (" + bchB2I + ") > xrpI2B (" + xrpI2B + ")");
             lastSentTime = new Date();
         }
-        if (bchB2I > powI2B && ((bchB2I / powI2B) * 1000) > roundTripProfit) {
+        if (((bchB2I / powI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((bchB2I / powI2B) * 1000).toFixed(0) + "/1000] : bchB2I (" + bchB2I + ") > powI2B (" + powI2B + ")");
             lastSentTime = new Date();
         }
-        if (bchB2I > dogI2B && ((bchB2I / dogI2B) * 1000) > roundTripProfit) {
+        if (((bchB2I / dogI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((bchB2I / dogI2B) * 1000).toFixed(0) + "/1000] : bchB2I (" + bchB2I + ") > dogI2B (" + dogI2B + ")");
             lastSentTime = new Date();
         }
         //DOG
-        if (dogB2I > xrpI2B && ((dogB2I / xrpI2B) * 1000) > roundTripProfit) {
+        if (((dogB2I / xrpI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((dogB2I / xrpI2B) * 1000).toFixed(0) + "/1000] : dogB2I (" + dogB2I + ") > xrpI2B (" + xrpI2B + ")");
             lastSentTime = new Date();
         }
-        if (dogB2I > powI2B && ((dogB2I / powI2B) * 1000) > roundTripProfit) {
+        if (((dogB2I / powI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((dogB2I / powI2B) * 1000).toFixed(0) + "/1000] : dogB2I (" + dogB2I + ") > powI2B (" + powI2B + ")");
             lastSentTime = new Date();
         }
-        if (dogB2I > bchI2B && ((dogB2I / bchI2B) * 1000) > roundTripProfit) {
+        if (((dogB2I / bchI2B) * 1000) > roundTripProfit) {
             bot.sendMessage(chatId, "Round Trip Profit : [" + ((dogB2I / bchI2B) * 1000).toFixed(0) + "/1000] : dogB2I (" + dogB2I + ") > bchI2B (" + bchI2B + ")");
             lastSentTime = new Date();
         }
