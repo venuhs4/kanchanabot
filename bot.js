@@ -40,6 +40,7 @@ var getParallel = async function () {
         data[1] = getResponse(urls[1]);
     } catch (err) {
         console.error(err);
+        //bot.sendMessage(chatId,JSON.stringify(err));
     }
     var bb = {
         XRP: [data[0].XRP.lowest_sell_bid, data[0].XRP.highest_buy_bid, data[0].XRP.volume.volume],
