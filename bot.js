@@ -314,5 +314,11 @@ bot.start();
 console.log('Bot is running');
 
 setInterval(function () {
-    getParallel();
+    try
+    {
+        getParallel();
+    }
+    catch(err){
+        console.log(err);
+    }
 }, 10000);
