@@ -34,7 +34,6 @@ var getResponse = function (url) {
 }
 
 var getParallel = async function () {
-    console.log(beginDate);
     try {
         data = [];
         data[0] = getResponse(urls[0]);
